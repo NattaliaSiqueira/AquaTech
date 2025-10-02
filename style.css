@@ -1,0 +1,392 @@
+*{ /*configuração universal para todo codigo*/
+
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+/* o ponto (.) é utilizado para chamar a div que está sendo executada no html, nome da div class*/
+.header{    
+    background-color: black;
+    border-bottom: 3px solid #32b8cd;
+
+}
+/* somente a pasta filho que está dentro do pai, no caso somente o container que está dentro do header*/
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 120px;  /*padding sozinho, aplica nos 4 cantos, o primeiro valor é cima e baixo, o segundo valor é direita e esquerda*/
+
+}
+
+.titulo{
+    color: #32b8cd;
+
+}
+
+/*estilizar menu*/
+.navbar{ /*link que navega pelos sites*/
+    display: flex;
+    list-style: none;
+    width: 300px;
+    justify-content: space-between;
+    color: #e3b062;
+
+}
+
+.navbar a {         /*  <a href="simulador.html">Simulador</a> se refere a esse elemento html <a */
+    color: #e3b062;
+    outline: none;
+    text-decoration: none;
+}
+
+.agora {
+    font-weight: bolder;
+}
+
+.banner{
+
+    height: 400px; /* px é fixo, tamanho fixo independente da tela*/
+    width: 100%;   /*% é volatil, tamanho se adapta em relação a tela*/
+    background-image: url('../assets/imgs/bg-jelly-fish-para-home.png'); /*  ../ utilizado para sair da pasta atual e ir até o local desejado, no caso a pasta de imagens*/
+    background-size: cover; /*ajuste de imagem automatico*/
+
+
+}
+
+.banner .container{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.banner .container p {   /* <p>Preservando <span>hoje</span> para existirem <span>amanhã</span>.</p> faz referencia a tag P*/
+    width: 170px;
+    color: white;
+    margin: 0;
+    font-size: 24px;
+
+}
+
+.banner .container span {
+    font-weight: bolder;
+
+}
+
+.social {
+    height: 400px;
+    width: 100%;
+    background-color: #dcdcdc;
+}
+
+.social .container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.boxes {
+    width: 80%; /*80% da largura do container de cima, em relação ao widht: 100% ali em cima*/
+    display: flex; /*fez com que ficassem em linha, e não um embaixo do outro*/
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.box{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.box img{
+    width: 120px;
+    height: 120px;
+
+}
+
+.box h4{
+    margin: 0; /*zerou a margem padrão do elemento */
+    margin-top: 10px;  /*definiu uma margem especificia */
+    color: #ed145b;
+}
+
+.footer { /*rodapé*/
+    height: 120px;
+    width: 100%; /*100% preenche toda tela*/
+    background-color: #32b8cd;
+
+}
+.footer .container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.footer h4{
+    margin-bottom: 0;
+
+}
+
+
+/* aqui termina o index.html*/
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white; 
+    background-color: #000000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../assets/imgs/bg-jelly-fish-para-home.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    border-bottom: 3px solid #32b9cd; 
+    background-color: transparent; 
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    padding: 0 10px;
+}
+
+.header .titulo {
+    color: #32b9cd;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0;
+}
+
+.navbar { 
+    display: flex;
+    list-style: none;
+    width: 380px; 
+    justify-content: space-between;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a { 
+    color: white;
+    outline: none;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #32b9cd;
+}
+
+.agora {
+    font-weight: bolder;
+}
+
+.navbar .agora a {
+    color: #32b9cd;
+}
+
+.login {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 50px 0;
+}
+
+.login .container {
+    width: auto;
+    height: auto;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.card-login {
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+    padding: 40px 50px;
+    width: 320px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.card-login h2 {
+    color: #32b9cd;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.card-login .formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.card-login .campo {
+    width: 100%;
+    text-align: left;
+}
+
+.card-login .campo span {
+    color: #333; 
+    font-weight: normal;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.card-login input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    background-color: white; 
+    color: #333; 
+    box-sizing: border-box; 
+    font-size: 16px;
+}
+
+.card-login input::placeholder {
+    color: #aaa;
+}
+
+.card-login .botao {
+    width: 100%;
+    padding: 12px;
+    background-color: #e6005a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.card-login .botao:hover {
+    background-color: #ff3377;
+}
+
+.footer { 
+    height: 120px;
+    width: 100%; 
+    background-color: #32b9cd; 
+}
+.footer .container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.footer h4{
+    margin-bottom: 0;
+}
+
+.banner{
+    height: 400px;
+    width: 100%;
+    background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+    background-size: cover;
+}
+
+.banner .container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .container p { 
+    width: 170px;
+    color: white;
+    margin: 0;
+    font-size: 24px;
+}
+
+.banner .container span {
+    font-weight: bolder;
+}
+
+.social {
+    height: 400px;
+    width: 100%;
+    background-color: #dcdcdc;
+}
+
+.social .container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxes {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.box img{
+    width: 120px;
+    height: 120px;
+}
+
+.box h4{
+    margin: 0; 
+    margin-top: 10px;
+    color: #ed145b;
+}
